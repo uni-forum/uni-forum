@@ -1,0 +1,22 @@
+{
+  "npmScope": "uni-forum",
+  "implicitDependencies": {
+    "angular.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "projects": {
+    "uni-forum": {
+      "tags": []
+    },
+    "uni-forum-e2e": {
+      "tags": [],
+      "implicitDependencies": ["uni-forum"]
+    }
+  }
+}

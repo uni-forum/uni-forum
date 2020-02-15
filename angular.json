@@ -1,0 +1,149 @@
+{
+  "version": 1,
+  "projects": {
+    "uni-forum": {
+      "projectType": "application",
+      "schematics": {
+        "@nrwl/angular:component": {
+          "style": "scss",
+          "changeDetection": "OnPush"
+        },
+        "@schematics/angular:component": {
+          "style": "scss",
+          "changeDetection": "OnPush"
+        }
+      },
+      "root": "apps/uni-forum",
+      "sourceRoot": "apps/uni-forum/src",
+      "prefix": "uni",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/apps/uni-forum",
+            "index": "apps/uni-forum/src/index.html",
+            "main": "apps/uni-forum/src/main.ts",
+            "polyfills": "apps/uni-forum/src/polyfills.ts",
+            "tsConfig": "apps/uni-forum/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "apps/uni-forum/src/favicon.ico",
+              "apps/uni-forum/src/assets"
+            ],
+            "styles": ["apps/uni-forum/src/styles.scss"],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "apps/uni-forum/src/environments/environment.ts",
+                  "with": "apps/uni-forum/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "uni-forum:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "uni-forum:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "uni-forum:build"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "apps/uni-forum/tsconfig.app.json",
+              "apps/uni-forum/tsconfig.spec.json"
+            ],
+            "exclude": ["**/node_modules/**", "!apps/uni-forum/**"]
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "apps/uni-forum/src/test.ts",
+            "tsConfig": "apps/uni-forum/tsconfig.spec.json",
+            "karmaConfig": "apps/uni-forum/karma.conf.js",
+            "polyfills": "apps/uni-forum/src/polyfills.ts",
+            "styles": [],
+            "scripts": [],
+            "assets": []
+          }
+        }
+      }
+    },
+    "uni-forum-e2e": {
+      "root": "apps/uni-forum-e2e",
+      "sourceRoot": "apps/uni-forum-e2e/src",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@nrwl/cypress:cypress",
+          "options": {
+            "cypressConfig": "apps/uni-forum-e2e/cypress.json",
+            "tsConfig": "apps/uni-forum-e2e/tsconfig.e2e.json",
+            "devServerTarget": "uni-forum:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "uni-forum:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": ["apps/uni-forum-e2e/tsconfig.e2e.json"],
+            "exclude": ["**/node_modules/**", "!apps/uni-forum-e2e/**"]
+          }
+        }
+      }
+    }
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/angular"
+  },
+  "schematics": {
+    "@nrwl/angular:application": {
+      "unitTestRunner": "karma",
+      "e2eTestRunner": "cypress"
+    },
+    "@nrwl/angular:library": {
+      "unitTestRunner": "karma"
+    }
+  },
+  "defaultProject": "uni-forum"
+}

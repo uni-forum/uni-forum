@@ -1,0 +1,11 @@
+<div class="custom-control custom-checkbox">
+  <input type="checkbox"
+         class="custom-control-input"
+         [id]="id"
+         [ngModel]="value"
+         (keydown.space)="onToggle()"
+         (keydown.enter)="onToggle()">
+  <label class="custom-control-label" [for]="id">
+    <ng-content></ng-content>
+  </label>
+</div>

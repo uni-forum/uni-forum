@@ -1,0 +1,50 @@
+@import "~open-color/open-color";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+// variable overrides
+$font-family-base: Inter, sans-serif;
+$font-size-base: 0.75rem;
+$font-weight-base: 500;
+
+$border-radius: 6px;
+
+$body-color: $oc-gray-9;
+$border-color: $oc-gray-2;
+
+$link-hover-decoration: none;
+
+$table-head-color: $oc-black;
+$table-cell-padding: 0.8125rem;
+$table-hover-bg: $oc-blue-0;
+$table-border-color: $border-color;
+
+$navbar-padding-y: 0.75rem;
+$navbar-brand-font-size: 1rem;
+$navbar-light-color: $oc-gray-6;
+
+$nav-tabs-border-color: $border-color;
+$nav-tabs-border-radius: 0;
+$nav-tabs-link-hover-border-color: transparent;
+$nav-tabs-link-active-color: $oc-black;
+$nav-tabs-link-active-border-color: $oc-black;
+
+$btn-font-size: $font-size-base;
+$btn-border-radius: $border-radius;
+$btn-font-weight: $font-weight-base;
+
+$input-border-color: $oc-gray-3;
+$input-border-radius: 6px;
+
+$blue: $oc-blue-6;
+$red: $oc-red-6;
+$orange: $oc-orange-6;
+$green: $oc-green-6;
+$yellow: $oc-yellow-6;
+$purple: $oc-indigo-6;
+$light: $white;
+
+$modal-header-border-color: $border-color;
+$modal-content-border-color: $border-color;
+$modal-footer-border-color: transparent;

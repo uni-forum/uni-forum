@@ -1,0 +1,12 @@
+@import 'variables';
+
+@mixin focus-shadow($color) {
+  &:focus {
+    outline: none;
+    box-shadow: none !important;
+
+    &.cdk-keyboard-focused {
+      box-shadow: $btn-box-shadow, 0 0 0 $btn-focus-width rgba(mix(color-yiq($color), $color, 15%), .5) !important;
+    }
+  }
+}

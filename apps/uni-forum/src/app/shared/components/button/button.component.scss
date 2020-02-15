@@ -1,0 +1,8 @@
+:host {
+  &:not(.cdk-keyboard-focused) {
+    &:focus,
+    &:active {
+      box-shadow: none !important;
+    }
+  }
+}

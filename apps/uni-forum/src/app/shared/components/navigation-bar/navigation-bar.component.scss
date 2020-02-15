@@ -1,0 +1,20 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+.navbar {
+
+  &-toggler {
+    color: $dark;
+    border: none;
+
+    @include focus-shadow($primary);
+  }
+
+  &-collapse {
+    justify-content: flex-end;
+  }
+
+  &__actions {
+    margin-left: 0.5rem;
+  }
+}

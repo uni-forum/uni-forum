@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import url('https://rsms.me/inter/inter.css');
+@import '~@angular/cdk/a11y-prebuilt.css';
+@import '~@angular/cdk/overlay-prebuilt.css';
+@import '~@angular/cdk/text-field-prebuilt.css';
+
+@import 'scss/variables';
+@import 'scss/theme';
+@import 'scss/tables';
+@import 'scss/navbar';
+@import 'scss/tabs';
+
+i-feather,
+i-feather svg {
+  width: 1em !important;
+  height: 1em !important;
+  vertical-align: top;
+}
+
+cdk-dialog-container {
+  outline: none;
+}

@@ -1,0 +1,12 @@
+@import '../../../../scss/variables';
+@import '../../../../scss/mixins';
+
+:host {
+  display: inline-block;
+  border-radius: $border-radius;
+  @include focus-shadow($primary);
+
+  &:hover {
+    cursor: pointer;
+  }
+}
