@@ -1,24 +1,67 @@
 <div cdkTrapFocus>
   <div class="modal-header">
-    <h5 class="modal-title">Log In</h5>
+    <h5 class="modal-title">Sign Up</h5>
   </div>
 
   <div class="modal-body">
 
-    <form>
+    <form [formGroup]="form" novalidate>
 
       <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+        <label for="username">Username</label>
+
+        <input type="text"
+               class="form-control"
+               id="username"
+               placeholder="Neil Smith"
+               formControlName="username"
+               [class.is-invalid]="form.controls.username.touched && form.controls.username.invalid">
+
+        <div class="invalid-feedback">
+          Please choose a username.
+        </div>
       </div>
 
       <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
+        <label for="email-address">Email address</label>
+        <input type="email"
+               class="form-control"
+               id="email-address"
+               placeholder="smithy@domain.com"
+               formControlName="email"
+               [class.is-invalid]="form.controls.email.touched && form.controls.email.invalid">
+
+        <div class="invalid-feedback">
+          Please provide a valid email address.
+        </div>
       </div>
 
       <div class="form-group">
-        <uni-checkbox>Remember Me</uni-checkbox>
+        <label for="password">Password</label>
+        <input type="password"
+               class="form-control"
+               id="password"
+               placeholder="Password"
+               formControlName="password"
+               [class.is-invalid]="form.controls.password.touched && form.controls.password.invalid">
+
+        <div class="invalid-feedback">
+          Please provide a password with at least 8 characters.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password"
+               class="form-control"
+               id="confirm-password"
+               placeholder="Confirm Password"
+               formControlName="confirmPassword"
+               [class.is-invalid]="form.controls.confirmPassword.touched && form.controls.confirmPassword.invalid">
+
+        <div class="invalid-feedback">
+          Passwords do not match.
+        </div>
       </div>
 
     </form>
@@ -26,7 +69,7 @@
   </div>
 
   <div class="modal-footer">
-    <button uni-button color="light" type="button" data-dismiss="modal">Close</button>
+    <button uni-button color="light" type="button" data-dismiss="modal" (click)="close()">Close</button>
     <button uni-button color="dark" type="button">Sign Up</button>
   </div>
 </div>

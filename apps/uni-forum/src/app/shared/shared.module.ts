@@ -11,7 +11,7 @@ import { ArrowLeft, ArrowRight, Menu, X } from 'angular-feather/icons';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,7 +28,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     RouterModule,
     FeatherModule.pick({ Menu, ArrowLeft, ArrowRight, X }),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   exports: [
     BannerComponent,
