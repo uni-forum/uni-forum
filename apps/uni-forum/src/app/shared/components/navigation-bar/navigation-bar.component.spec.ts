@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavigationBarComponent } from './navigation-bar.component';
+import { SharedModule } from '../../shared.module';
 
 describe('NavigationBarComponent', () => {
   let component: NavigationBarComponent;
@@ -8,7 +9,7 @@ describe('NavigationBarComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ NavigationBarComponent ]
+      imports: [SharedModule]
     })
     .compileComponents();
   }));

@@ -2,6 +2,7 @@ import { async, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { DialogModule } from '@angular/cdk-experimental/dialog';
 import { SharedModule } from './shared/shared.module';
+import { RouterModule } from '@angular/router';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,7 +10,8 @@ describe('AppComponent', () => {
       declarations: [AppComponent],
       imports: [
         DialogModule,
-        SharedModule
+        SharedModule,
+        RouterModule.forRoot([])
       ]
     }).compileComponents();
   }));

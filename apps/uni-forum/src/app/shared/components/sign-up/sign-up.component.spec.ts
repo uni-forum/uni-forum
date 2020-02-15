@@ -1,6 +1,8 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SignUpComponent } from './sign-up.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DialogModule, DialogRef } from '@angular/cdk-experimental/dialog';
 
 describe('SignUpComponent', () => {
   let component: SignUpComponent;
@@ -8,7 +10,15 @@ describe('SignUpComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SignUpComponent ]
+      declarations: [ SignUpComponent ],
+      imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        DialogModule
+      ],
+      providers: [
+        { provide: DialogRef, useValue: {} }
+      ]
     })
     .compileComponents();
   }));
