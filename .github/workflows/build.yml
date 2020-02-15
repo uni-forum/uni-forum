@@ -31,4 +31,4 @@ jobs:
       - name: Run Tests
         run: npm run test
       - name: Run build
-        run: npm run build:production
+        run: npm run build:ci
