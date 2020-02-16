@@ -1,0 +1,25 @@
+@import '../../../../scss/variables';
+@import '~open-color/open-color';
+
+.discussion {
+  display: flex;
+  border-radius: $border-radius;
+
+  &__header {
+
+  }
+
+  &__timestamp {
+    color: $oc-gray-6;
+    margin-bottom: 0.5rem;
+  }
+
+  &__author {
+    color: $oc-gray-9;
+  }
+
+  &__preview {
+    color: $oc-gray-6;
+    margin-bottom: 0;
+  }
+}
