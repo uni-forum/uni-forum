@@ -1,4 +1,4 @@
-<uni-navigation-bar>
+<uni-navigation-bar class="navigation-bar">
   <uni-navigation-bar-item routerLink="">Home</uni-navigation-bar-item>
   <uni-navigation-bar-item routerLink="/about">About</uni-navigation-bar-item>
   <uni-navigation-bar-item routerLink="/login">Log In</uni-navigation-bar-item>
@@ -6,4 +6,6 @@
   <button uni-button (click)="showSignUp()">Sign Up</button>
 </uni-navigation-bar>
 
-<router-outlet></router-outlet>
+<div class="page-content">
+  <router-outlet></router-outlet>
+</div>

@@ -7,7 +7,18 @@ import { RouterModule } from '@angular/router';
 import { ButtonComponent } from './components/button/button.component';
 import { A11yModule } from '@angular/cdk/a11y';
 import { FeatherModule } from 'angular-feather';
-import { ArrowLeft, ArrowRight, Menu, X } from 'angular-feather/icons';
+import {
+  ArrowLeft,
+  ArrowRight,
+  BarChart,
+  BarChart2,
+  Eye,
+  Heart,
+  Menu,
+  MessageCircle,
+  MessageSquare,
+  X
+} from 'angular-feather/icons';
 import { LoginComponent } from './components/login/login.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
@@ -27,7 +38,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     A11yModule,
     CommonModule,
     RouterModule,
-    FeatherModule.pick({ Menu, ArrowLeft, ArrowRight, X }),
+    FeatherModule.pick({ Menu, ArrowLeft, ArrowRight, X, MessageSquare, Heart, Eye, MessageCircle, BarChart, BarChart2 }),
     FormsModule,
     ReactiveFormsModule
   ],

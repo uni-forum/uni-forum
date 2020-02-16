@@ -1,9 +1,12 @@
-<uni-banner header="Discussions" subheader="Participate in discussions and ask questions"></uni-banner>
+<uni-banner color="orange"
+            header="Discussions"
+            subheader="Participate in discussions and ask questions">
+</uni-banner>
 
-<div class="container mt-5">
+<div class="container mt-4">
   <div class="row">
     <div class="col-9">
-      <uni-discussion></uni-discussion>
+      <uni-discussion *ngFor="let discussion of [1,1,1,1,1,1,1,1]"></uni-discussion>
     </div>
     <div class="col-3">
     </div>

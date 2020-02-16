@@ -19,4 +19,4 @@ export class BannerComponent {
 
 }
 
-export type BannerColor = 'orange' | 'blue';
+export type BannerColor = 'orange' | 'blue' | 'purple';

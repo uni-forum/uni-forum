@@ -6,11 +6,15 @@
   box-shadow: inset 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.075);
 
   &--orange {
-    background: linear-gradient(120deg, #fa6b6b 0, #fcb663 100%);
+    background: linear-gradient(120deg, $oc-red-5 0, $oc-orange-4 100%);
   }
 
   &--blue {
-    background: linear-gradient(120deg, #2f80ed 0%, #56ccf2 100%);
+    background: linear-gradient(120deg, $oc-blue-6 0%, $oc-cyan-4 100%);
+  }
+
+  &--purple {
+    background: linear-gradient(120deg, $oc-grape-6 0, $oc-indigo-6 100%);
   }
 
   &__content {
